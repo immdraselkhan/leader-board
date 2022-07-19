@@ -39,7 +39,11 @@ main {
 .header-container {
     width: 930px;
     display: flex;
-    justify-content: ;
+    align-items: center;
+}
+
+.mobile-menu {
+    display: none;
 }
 
 .logo {
@@ -50,12 +54,14 @@ main {
 
 .logo img {
     height: 50px;
+    cursor: pointer;
 }
 
 .logo-text {
     color: #FFF;
     font-size: 25px;
     margin-left: 15px;
+    cursor: pointer;
 }
 
 .nav-bar {
@@ -73,6 +79,7 @@ main {
 
 .profile-icon {
     height: 50px;
+    cursor: pointer;
 }
 
 /* section title */
@@ -210,8 +217,35 @@ hr {
 /* media queries */
 
 @media screen and (max-width: 992px) {
+
+    .mobile-menu, .nav-bar, .logo {
+        display: inherit;
+        width: inherit;
+    }
+
+    .mobile-menu a {
+        color: #FFF;
+        font-size: 25px;
+    }
+
+    .nav-menu {
+        display: none;
+    }
+
+    .logo {
+        justify-content: center;
+    }
+
+    .header-container {
+        padding: 0 15px;
+        box-sizing: border-box;
+        width: 100%;
+    }
+
     .container {
         width: 100%;
+        padding: 30px 15px;
+        box-sizing: border-box;
     }
 
     .section-title {
